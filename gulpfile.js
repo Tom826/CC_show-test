@@ -29,7 +29,7 @@ export const style = () => {
 
 //html
 const html = () => {
-  return gulp.src('source/*.html')
+  return gulp.src('*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
@@ -38,13 +38,19 @@ const html = () => {
 
 //imgs
 const optimizeImg = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src([
+    'img/*.{jpg,png}', 
+    'pic/*.{jpg,png}'
+  ])
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
 const copyImg = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src([
+    'img/*.{jpg,png}', 
+    'pic/*.{jpg,png}'
+  ])
     .pipe(gulp.dest('build/img'))
 }
 
@@ -68,13 +74,19 @@ const clean = () => {
 
 //svg
 const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src([
+    'img/*.svg', 
+    'pic/*.svg'
+  ])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'))
 }
 
 const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src([
+    'img/*.svg',
+    'pic/*.svg'
+  ])
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
@@ -85,7 +97,10 @@ const sprite = () => {
 
 //webp
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src([
+    'img/*.{jpg,png}',
+    'pic/*.{jpg,png}'
+  ])
   .pipe(squoosh({
     webp: {}
   }))
@@ -113,9 +128,9 @@ const reload = (done) => {
 
 //watcher
 const watcher = () => {
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('*.html', gulp.series(html, reload));
   gulp.watch('source/sass/**/*.scss', gulp.series(style));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('*.html').on('change', browser.reload);
   // gulp.watch('source/js/*.js', gulp.series(script));
 }
 
