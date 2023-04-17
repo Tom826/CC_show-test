@@ -1,4 +1,4 @@
-.header{
+.header {
   position: relative;
 
   @include desktop {
@@ -22,8 +22,8 @@
 }
 
 .header__button {
-  background-color:inherit;
-  border:  none;
+  background-color: inherit;
+  border: none;
   display: block;
   margin-left: auto;
   padding-top: 16px;

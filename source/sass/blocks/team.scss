@@ -61,7 +61,7 @@
 .team__title {
   font-size: 20px;
   line-height: 25px;
-  
+
   @include desktop {
     font-size: 57px;
     line-height: 69px;
@@ -81,7 +81,8 @@
   }
 }
 
-.team__about,  .team__addition{
+.team__about,
+.team__addition {
   font-size: 10px;
 
   @include desktop {

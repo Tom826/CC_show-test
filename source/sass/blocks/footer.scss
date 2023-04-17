@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(358.09deg, #000000 18.23%, #FFE5AF 196.63%);
+  background: linear-gradient(358.09deg, #000000 18.23%, #ffe5af 196.63%);
   padding: 40px 28px 10px;
   position: relative;
 
@@ -43,7 +43,7 @@
   }
 }
 
-.footer__title  {
+.footer__title {
   font-weight: 400;
   font-size: 63px;
   line-height: 76px;
@@ -108,13 +108,19 @@
 
 .footer__img {
   grid-row: 2;
+
+  @include desktop {
+    width: 164px;
+    height: 68px;
+  }
 }
 
-.footer__constent, .footer__legal-information-item {
+.footer__constent,
+.footer__legal-information-item {
   font-size: 5.5px;
   line-height: 7px;
   color: $light-text-color;
-  
+
   @include desktop {
     font-size: 18px;
     line-height: 22px;
@@ -123,11 +129,4 @@
 
 .footer__legal-information {
   text-align: end;
-}
-
-.footer__img {
-  @include desktop {
-    width: 164px;
-    height: 68px;
-  }
 }
