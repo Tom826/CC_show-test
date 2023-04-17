@@ -1,0 +1,91 @@
+.team {
+  padding: 0 12px 0 18px;
+  position: relative;
+
+  @include desktop {
+    padding: 36px 28px 100px 18px;
+  }
+}
+
+.team::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../../img/team-background.svg");
+  width: 340px;
+  height: 302px;
+  top: 104px;
+  left: 0;
+
+  @include desktop {
+    background-image: url("../../../img/team-bg-circles-desk.svg");
+    width: 960px;
+    height: 836px;
+    top: 296px;
+  }
+}
+
+.team__title-litle {
+  color: $light-text-color;
+  margin: 0 12px 30px 156px;
+  position: relative;
+
+  @include desktop {
+    font-size: 21px;
+    line-height: 25px;
+    width: 400px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+
+.team__title-litle::after {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/gold-star.svg");
+  background-repeat: no-repeat;
+  top: -4px;
+  right: -16px;
+
+  @include desktop {
+    width: 48px;
+    height: 49px;
+    background-image: url("../../../img/gold-desk-star.svg");
+    top: -16px;
+    right: -5px;
+  }
+}
+
+.team__title {
+  font-size: 20px;
+  line-height: 25px;
+  
+  @include desktop {
+    font-size: 57px;
+    line-height: 69px;
+    margin-left: 70px;
+  }
+}
+
+.team__description {
+  color: $light-text-color;
+  width: 200px;
+  margin-left: auto;
+  margin-bottom: 240px;
+
+  @include desktop {
+    width: 580px;
+    margin-bottom: 610px;
+  }
+}
+
+.team__about,  .team__addition{
+  font-size: 10px;
+
+  @include desktop {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}

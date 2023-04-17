@@ -1,0 +1,7 @@
+.nav {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}

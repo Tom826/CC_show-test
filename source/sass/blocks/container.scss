@@ -1,7 +1,19 @@
 .container {
   background-color: $main-bg-color;
   width: 100%;
-  min-height: 100vh;
   max-width: $mobile-width;
-  margin: 0, auto;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: $desktop-width;
+  }
+}
+
+.container__wrapper {
+  @include desktop {
+    background-image: url("../img/background-hero-desk.png");
+    background-repeat: no-repeat;
+  }
 }

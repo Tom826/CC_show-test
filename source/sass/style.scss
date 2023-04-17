@@ -1,7 +1,9 @@
 @import "../sass/variables.scss";
+@import "../sass/normalize.scss";
 @import "../sass/mixins.scss";
 @import "../sass/fonts.scss";
 @import "../sass/global.scss";
+@import "../sass/blocks/title.scss";
 @import "../sass/blocks/about.scss";
 @import "../sass/blocks/additional-services.scss";
 @import "../sass/blocks/advantages.scss";
@@ -16,4 +18,3 @@
 @import "../sass/blocks/page.scss";
 @import "../sass/blocks/services.scss";
 @import "../sass/blocks/team.scss";
-@import "../sass/blocks/title.scss";

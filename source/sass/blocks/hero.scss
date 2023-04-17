@@ -1,0 +1,98 @@
+.hero {
+  padding: 40px 18px 0px 40px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 50px;
+  background-image: url("../img/black-srat.svg");
+  background-repeat: no-repeat;
+  top: 16px;
+  left: 18px;
+
+  @include desktop {
+    width: 48px;
+    height: 50px;
+    background-image: url("../img/black-desk-star.svg");
+    background-repeat: no-repeat;
+    top: -105px;
+    left: 870px;
+  }
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 134px;
+  height: 138px;
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  top: 176px;
+  right: 34px;
+
+  @include desktop {
+    width: 370px;
+    height: 380px;
+    background-image: url("../img/logo-desk.svg");
+    background-repeat: no-repeat;
+    top: 326px;
+    right: 92px;
+  }
+}
+
+.hero__text {
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 134px;
+  position: relative;
+
+  @include desktop {
+    font-size: 33px;
+    line-height: 40px;
+    width: 400px;
+    margin-left: auto;
+  }
+}
+
+.hero__advantages {
+  font-size: 4px;
+  line-height: 5px;
+  list-style-type: none;
+  margin: 80px 0 114px 0;
+
+  @include desktop {
+    margin: 230px 0 314px 160px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.hero__text::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/hero-background.svg");
+  width: 426px;
+  height: 311px;
+  top: 40%;
+  left: -135%;
+
+  @include desktop {
+    background-image: url("../img/hero-bg-desk.svg");
+    width: 960px;
+    height: 858px;
+    top: 40%;
+    left: -136%;
+    z-index: 1;
+  }
+}
+
+.hero__title {
+  @include desktop {
+    font-size: 64px;
+    line-height: 77px;
+    margin-left: 58px;
+  }
+}

@@ -1,0 +1,133 @@
+.footer {
+  background: linear-gradient(358.09deg, #000000 18.23%, #FFE5AF 196.63%);
+  padding: 40px 28px 10px;
+  position: relative;
+
+  @include desktop {
+    padding: 38px 76px 10px;
+  }
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/bacjgroung-circkles.svg");
+  background-repeat: no-repeat;
+  width: 296px;
+  height: 40px;
+  top: 150px;
+  left: 28px;
+
+  @include desktop {
+    background-image: url("../../../img/footer-bg-circles-desk.svg");
+    width: 823px;
+    height: 107px;
+    top: 322px;
+    left: 76px;
+  }
+}
+
+.footer::after {
+  content: "MIX & MATCH WE MAKE IT HAPPEN MIX & MATCH WE MAKE IT HAPPEN MIX & MATCH WE MAKE IT HAPPEN ";
+  position: absolute;
+  opacity: 0.2;
+  width: 120%;
+  font-size: 9px;
+  bottom: 20px;
+  left: -40px;
+
+  @include desktop {
+    font-size: 27px;
+    line-height: 33px;
+    width: 140%;
+  }
+}
+
+.footer__title  {
+  font-weight: 400;
+  font-size: 63px;
+  line-height: 76px;
+  color: $main-text-color;
+  margin: 0 0 118px -170px;
+
+  @include desktop {
+    font-size: 176px;
+    line-height: 213px;
+    margin: 0 0 328px -470px;
+  }
+}
+
+.footer__title::before {
+  content: "CON";
+  position: absolute;
+  font-weight: 400;
+  font-size: 63px;
+  line-height: 76px;
+  color: $main-text-color;
+  top: 40px;
+  left: 210px;
+
+  @include desktop {
+    font-size: 176px;
+    line-height: 213px;
+    left: 718px;
+    top: 40px;
+  }
+}
+
+.footer__title::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/CC-show-footer-title.svg");
+  background-repeat: no-repeat;
+  width: 74px;
+  height: 52px;
+  top: 50px;
+  left: 152px;
+
+  @include desktop {
+    background-image: url("../../../img/footer-star-desk.svg");
+    width: 204px;
+    height: 134px;
+    top: 70px;
+    left: 430px;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 50%;
+  gap: 8px 0;
+  margin-bottom: 70px;
+
+  @include desktop {
+    gap: 28px 0;
+  }
+}
+
+.footer__img {
+  grid-row: 2;
+}
+
+.footer__constent, .footer__legal-information-item {
+  font-size: 5.5px;
+  line-height: 7px;
+  color: $light-text-color;
+  
+  @include desktop {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.footer__legal-information {
+  text-align: end;
+}
+
+.footer__img {
+  @include desktop {
+    width: 164px;
+    height: 68px;
+  }
+}

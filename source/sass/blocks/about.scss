@@ -1,0 +1,55 @@
+.about {
+  padding: 104px 18px 80px 40px;
+  background-color: rgba(30, 30, 28, 1);
+  width: 100%;
+  position: relative;
+  margin-bottom: 18px;
+
+  @include desktop {
+    padding: 328px 18px 228px 110px;
+  }
+}
+
+.about::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 18px;
+  background-image: url("../img/gold-star.svg");
+  top: 16px;
+  left: 18px;
+
+  @include desktop {
+    background-image: url("../../../img/gold-small-desk-star.svg");
+    width: 47px;
+    height: 48px;
+    top: 40px;
+    left: 40px;
+  }
+}
+
+.about::after {
+  position: absolute;
+  content: "";
+  width: 170px;
+  height: 16px;
+  background-color: $main-text-color;
+  border-radius: 0 21px 21px 0;
+  bottom: -8px;
+  left: 0;
+
+  @include desktop {
+    width: 524px;
+    height: 44px;
+    bottom: -22px;
+  }
+}
+
+.about__text-margin {
+  display: block;
+  margin-bottom: 10px;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+}

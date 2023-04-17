@@ -1,0 +1,23 @@
+.main {
+  background-image: url("../img/hero-background-mob.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: -15% 0;
+
+  @include desktop {
+    margin: 0;
+    background-image: none;
+  }
+}
+
+.main__logo {
+  margin: 15px;
+  display: block;
+  margin-bottom: 175px;
+  
+  @include desktop {
+    width: 593px;
+    height: 245px;
+    margin: 15px 202px 450px 130px;
+  }
+}

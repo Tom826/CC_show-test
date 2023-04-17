@@ -1,0 +1,81 @@
+.services {
+  padding: 0 10px 0 18px;
+  margin-bottom: 48px;
+
+  @include desktop {
+    padding: 0 18px 0 48px;
+  }
+}
+
+.services__title {
+  margin-left: -92px;
+  font-size: 30px;
+  color: $main-text-color;
+  position: relative;
+  margin-bottom: 28px;
+
+  @include desktop {
+    font-size: 82px;
+    line-height: 99px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.services__title::after {
+  content: "ЧТО МЫ МОЖЕМ?";
+  position: absolute;
+  color: $dark-text-color;
+  display: block;
+  width: 400px;
+  top: 0;
+  right: -246px;
+
+  @include desktop {
+    width: 900px;
+    right: -562px;
+  }
+}
+
+.services__subtitle {
+  margin-bottom: 28px;
+
+  @include desktop {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.services__list {
+  columns: 2 auto;
+  column-gap: 38px;
+  list-style-type: none;
+
+  @include desktop {
+    padding-left: 60px;
+    column-gap: 80px;
+    margin-bottom: 35px;
+  }
+}
+
+.list__item {
+  position: relative;
+}
+
+.services__list > .list__item::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/gold-star.svg");
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: -26px;
+
+  @include desktop {
+    background-image: url("../../../img/gold-small-desk-star.svg");
+    width: 48px;
+    height: 46px;
+    left: -76px;
+  }
+}

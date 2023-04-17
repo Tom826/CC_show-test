@@ -2,8 +2,13 @@
   font-family: "Futura Book C", "Aria", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 19px;
-  line-height: 23px;
+  font-size: 8px;
+  line-height: 10px;
   color: $main-text-color;
   margin: 0;
+
+  @include desktop {
+    font-size: 19px;
+    line-height: 23px;
+  }
 }

@@ -1,0 +1,58 @@
+.header{
+  position: relative;
+
+  @include desktop {
+    padding: 50px;
+    display: flex;
+  }
+}
+
+.header__logo {
+  display: none;
+
+  @include desktop {
+    display: block;
+    width: 130px;
+    height: 54px;
+  }
+}
+
+.header__link {
+  display: block;
+}
+
+.header__button {
+  background-color:inherit;
+  border:  none;
+  display: block;
+  margin-left: auto;
+  padding-top: 16px;
+  margin-right: 16px;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.nav__list-button-close {
+  @include desktop {
+    display: none;
+  }
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  gap: 38px;
+  align-items: center;
+  margin-left: 140px;
+}
+
+.nav__list-link {
+  text-decoration: none;
+  color: $main-bg-color;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}

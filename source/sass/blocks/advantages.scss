@@ -1,0 +1,11 @@
+.advantages {
+  padding: 0;
+}
+
+.advantages__item {
+  margin-bottom: 2px;
+
+  @include desktop {
+    margin-bottom: 8px;
+  }
+}
